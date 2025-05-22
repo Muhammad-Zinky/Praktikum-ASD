@@ -62,7 +62,7 @@ public class DoubleLinkedList10 {
 
         System.out.println("Node berhasil disisipkan setelah NIM" + keyNim);
     }
-    
+
     public void print() {
     if (isEmpty()) {
         System.out.println("Linked list masih kosong.");
@@ -72,6 +72,36 @@ public class DoubleLinkedList10 {
         while (current != null) {
             current.data.tampil();
             current = current.next;
+        }
+    }
+
+        public void removeFirst() {
+        if (isEmpty()) {
+            System.out.println("List kosong, tidak bisa dihapus.");
+            return;
+        }
+
+        System.out.println("Data yang terhapus adalah: ");
+        head.data.tampil();
+        
+        if (head == tail) {
+            head = tail = null;
+        } else {
+            head = head.prev;
+            head.next = null;
+        }
+    }
+
+    public void removeLast() {
+        if (isEmpty()) {
+            System.out.println("List kosong, tidak bisa dihapus.");
+            return;
+        }
+        if (head == tail) {
+            head = tail = null;
+        } else {
+            tail = tail.prev;
+            tail.next = null;
         }
     }
 }

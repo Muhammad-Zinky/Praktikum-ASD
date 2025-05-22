@@ -30,7 +30,7 @@ public class DLLMain10 {
             System.out.println("4. Hapus dari akhir");
             System.out.println("5. Tampilkan data");
             System.out.println("6. Cari mahasiswa berdasarkan NIM");
-            System.out.println("7. Sisipkan data setelah NIM tertentu");
+            System.out.println("7. Insert after");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = scan.nextInt();
@@ -44,8 +44,8 @@ public class DLLMain10 {
                 Mahasiswa10 mhs = inputMahasiswa(scan);
                 list.addLast(mhs);
             }
-            // case 3 -> list.removeFirst();
-            // case 4 -> list.removeLast();
+            case 3 -> list.removeFirst();
+            case 4 -> list.removeLast();
             case 5 -> list.print();
             // case 6 -> {
             //     System.out.println("Masukkan NIM yang dicari: ");
