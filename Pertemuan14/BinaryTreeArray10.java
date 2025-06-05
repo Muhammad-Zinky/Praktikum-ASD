@@ -2,7 +2,7 @@ package Pertemuan14;
 
 public class BinaryTreeArray10 {
         Mahasiswa10[] dataMahasiswa;
-    int idxLast;
+        int idxLast = -1;
 
     public BinaryTreeArray10() {
         this.dataMahasiswa = new Mahasiswa10[10];
